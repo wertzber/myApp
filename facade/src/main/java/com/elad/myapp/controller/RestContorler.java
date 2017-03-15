@@ -1,4 +1,5 @@
-package com.elad;
+package com.elad.myapp.controller;
+
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -9,20 +10,19 @@ import org.springframework.web.bind.annotation.*;
  * Sample spring boot with rest resource
  */
 @Controller
-@RequestMapping("/rest")
-public class RestContorller {
+public class RestContorler {
 
 
-    @RequestMapping(value = "/resources", method = RequestMethod.GET)
+    @RequestMapping(value = "/elad", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.ACCEPTED)
     @ResponseBody
     public String getResources() throws Exception {
 
         System.out.print("Elad test get!!");
-        return "Elad test get!!";
+        return "Elad test get resources!!";
     }
 
-    @RequestMapping(value = "management/userId/{userId}/userName/{userName}/accountId/{accountId}", method = RequestMethod.POST)
+    @RequestMapping(value = "/management/userId/{userId}/userName/{userName}/accountId/{accountId}", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.ACCEPTED)
     @ResponseBody
     public String postAccessToken(@PathVariable("userId") int userId, @PathVariable("userName") String userName,

@@ -2,26 +2,35 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
     <parent>
-        <groupId>com.elad</groupId>
         <artifactId>myapp</artifactId>
+        <groupId>com.elad</groupId>
         <version>1.0.0.0-SNAPSHOT</version>
     </parent>
-
+    <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.elad.myapp</groupId>
-    <artifactId>facade</artifactId>
-    <version>1.0.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <artifactId>application</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
 
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.elad.myapp</groupId>
+            <artifactId>facade</artifactId>
+            <version>1.0.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+
 </project>
