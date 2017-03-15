@@ -24,6 +24,7 @@
         <module>facade</module>
         <module>application</module>
         <module>model</module>
+        <module>dal</module>
     </modules>
 
 
